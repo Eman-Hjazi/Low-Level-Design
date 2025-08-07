@@ -21,10 +21,13 @@ Design Principles :-
 * ✅ **SOLID Principles**
 * ✅ **DRY (Don't Repeat Yourself)**
 * ✅ **KISS (Keep It Simple, Stupid)**
-[SOLID & DRY & KISS](../DesignPrinciples/Notes_Software%20Design%20Principles.pdf)
+
+1- [SOLID & DRY & KISS](../DesignPrinciples/Notes_Software%20Design%20Principles.pdf)
+
 * ✅ **Encapsulate What Varies**
 * ✅ **Program to an Interface, Not an Implementation**
 * ✅ **Favor Composition Over Inheritance**
+
 [Design Principles](../DesignPrinciples/DesignPrinciples.md)
 
-[Notes OOP Design Principles from Head First Design Patterns](Notes_DesignPrinciples_fromBookHFDP.pdf)
+2- [Notes OOP Design Principles from Head First Design Patterns](Notes_DesignPrinciples_fromBookHFDP.pdf)

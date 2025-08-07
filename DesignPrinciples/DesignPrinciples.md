@@ -1,4 +1,4 @@
-#  Encapsulate What Varies
+# First principle : Encapsulate What Varies
 
 You add a small feature. Suddenly, you’re rewriting code in five different places?
 
