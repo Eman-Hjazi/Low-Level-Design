@@ -29,6 +29,6 @@ Design Principles :-
 
 **Summery PDF**
 
-1- [SOLID & DRY & KISS](/DesignPrinciples/Notes_Software%20Design%20Principles.pdf)
+1- [SOLID & DRY & KISS](/DesignPrinciples/Notes_SoftwareDesignPrinciples.pdf)
 
 2- [Notes OOP Design Principles from Head First Design Patterns](/DesignPrinciples/Notes_DesignPrinciples_fromBookHFDP.pdf)
