@@ -24,6 +24,9 @@ Quack 🦆
 
 So you start simple with a Duck class:
 
+![Simple Duck Class Diagrams
+](../Images/SimpleDuckClass.png)
+
 ```java
 class Duck {
     public void quack() {
@@ -62,7 +65,7 @@ class Duck {
 But wait… 🤔 what about rubber ducks?
 
 ## 🟥 Requirement 2: Rubber Ducks
-
+![](../Images/RubberDuck.png)
 You add a subclass:
 
 ```java
@@ -106,7 +109,7 @@ You’ll need to update it in every duck subclass that flies.
 It’s brittle. It’s messy. It’s wrong.
 
 ##  Solution 1: Inheritance
-
+![](../Images/Solution1_Inheritance.png)
  - Every behavior is in the superclass
 
  - Can’t customize easily
@@ -118,7 +121,7 @@ It’s brittle. It’s messy. It’s wrong.
 ## Solution 2: Interfaces
 
 You move behaviors to interfaces:
-
+![](../Images/Solution2_UsingInterfaces.png)
 ```java
 
 interface Flyable {
@@ -148,79 +151,20 @@ Here’s the breakthrough:
 > So you can change behavior without touching unrelated code.
 
 **How?**
-
+![](../Images/Solution3.png)
 👉 Define behavior objects, and make your `Duck` class delegate to them.
+
 
 **💡 Applying the Principle**
 
 Step 1: Define Behavior Interfaces
 
-```java
-interface FlyBehavior {
-    void fly();
-}
-
-interface QuackBehavior {
-    void quack();
-}
-```
 
 Step 2: Create Behavior Implementations
 
-```java
-class FlyWithWings implements FlyBehavior {
-    public void fly() {
-        System.out.println("Flying with wings!");
-    }
-}
-
-class FlyNoWay implements FlyBehavior {
-    public void fly() {
-        System.out.println("I can’t fly.");
-    }
-}
-
-class QuackLoud implements QuackBehavior {
-    public void quack() {
-        System.out.println("QUACK!");
-    }
-}
-
-class MuteQuack implements QuackBehavior {
-    public void quack() {
-        // silence...
-    }
-}
-```
 
 Step 3: Refactor Duck Class
 
-```java 
-abstract class Duck {
-    FlyBehavior flyBehavior;
-    QuackBehavior quackBehavior;
-
-    public void performFly() {
-        flyBehavior.fly();
-    }
-
-    public void performQuack() {
-        quackBehavior.quack();
-    }
-
-    public void setFlyBehavior(FlyBehavior fb) {
-        flyBehavior = fb;
-    }
-
-    public void setQuackBehavior(QuackBehavior qb) {
-        quackBehavior = qb;
-    }
-
-    public void swim() {
-        System.out.println("All ducks float!");
-    }
-}
-```
 
 Step 4: Create Ducks with Custom Behaviors
 
@@ -324,3 +268,103 @@ Whenever you see behavior that keeps changing, think:
 “Should this live in a separate object?”
 
 That’s encapsulation in action.
+
+# Second principle : Program to an Interface, Not an Implementation
+
+What Does It Really Mean?
+
+Don’t hardcode behavior.
+Rely on abstractions instead of details.
+
+✅ Good:
+
+```java
+FlyBehavior fb = new FlyWithWings();
+```
+
+❌ Bad:
+
+```java
+FlyWithWings fb = new FlyWithWings();
+```
+
+## ❓ Common Questions
+
+“Does this only apply to interfaces?”
+
+No. It also applies to:
+
+Abstract classes
+
+Function signatures
+
+Service contracts
+
+Even APIs and modules
+
+Wherever you're depending on something — depend on the what, not the how.
+
+“How does this relate to Dependency Injection?”
+Great question. They’re best friends.
+
+Program to an interface tells you what to depend on.
+Dependency injection tells you how to provide that dependency.
+
+Together, they enable decoupled and pluggable architecture.
+
+# Third and final principle from Head First Design Patterns:Favor Composition Over Inheritance
+
+
+Instead of inheriting behavior, ducks now delegate it.
+
+
+**❓ Common Questions**
+“Is inheritance always bad?”
+No. Inheritance is fine when:
+
+You have true IS-A relationships
+
+Behavior is stable, not changing
+
+You’re not overriding half the superclass methods
+
+If you're fighting the inheritance tree — it's a sign you need composition.
+
+“Does composition mean more objects?”
+Yes. But small, focused objects are easy to:
+
+Test ✅
+
+Reuse 🔁
+
+Maintain 🔧
+
+You’re trading complexity in logic for clarity in structure.
+
+“Can I use both?”
+Absolutely.
+
+A Duck may inherit from an abstract Bird,
+but compose its FlyBehavior and QuackBehavior.
+
+That’s not just okay — that’s often ideal.
+
+
+# 📁 Folder Structure
+
+```bash
+DesignPrinciples/
+└── SimuDuck/
+├── Duck.java
+├── MallardDuck.java
+├── RubberDuck.java
+├── FlyBehavior.java
+├── FlyWithWings.java
+├── FlyNoWay.java
+├── QuackBehavior.java
+├── QuackLoud.java
+├── MuteQuack.java
+├── Test.java
+```
+
+All code available here → [GitHub Folder](/DesignPrinciples/SimuDuck/)

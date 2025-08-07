@@ -1,4 +1,6 @@
-# In Application Development: The Only Constant is Change
+#  OOP Design Principles from Head First Design Patterns
+
+##  In Application Development: The Only Constant is Change
 
 Welcome to software development, where change is not the exception—it’s the rule.
 
@@ -16,9 +18,13 @@ This is where we explore and apply principles like:
 
 Design Principles :-
 
-* ✅ [**SOLID Principles**]()
-* ✅ [**DRY (Don't Repeat Yourself)**]()
-* ✅ [**KISS (Keep It Simple, Stupid)**]()
-* ✅ [**Encapsulate What Varies**](Encapsulate_What_Varies.md)
-* ✅ [**Program to an Interface, Not an Implementation**](Program_To_An_Interface.md)
-* ✅ [**Favor Composition Over Inheritance**](Favor_Composition_Over_Inheritance.md)
+* ✅ **SOLID Principles**
+* ✅ **DRY (Don't Repeat Yourself)**
+* ✅ **KISS (Keep It Simple, Stupid)**
+[SOLID & DRY & KISS](../DesignPrinciples/Notes_Software%20Design%20Principles.pdf)
+* ✅ **Encapsulate What Varies**
+* ✅ **Program to an Interface, Not an Implementation**
+* ✅ **Favor Composition Over Inheritance**
+[Design Principles](../DesignPrinciples/DesignPrinciples.md)
+
+[Notes OOP Design Principles from Head First Design Patterns](Notes_DesignPrinciples_fromBookHFDP.pdf)
