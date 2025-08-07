@@ -305,7 +305,10 @@ You don’t have to pick a side — use both wisely.
 4- “Can I change behavior at runtime?”
 Absolutely — that’s a major benefit.
 
-With: ```java duck.setFlyBehavior(new FlyWithRocket());```
+With: 
+```java
+duck.setFlyBehavior(new FlyWithRocket());
+```
 
 You can make ducks dynamically adopt new behaviors.
 
